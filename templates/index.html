@@ -1,0 +1,22 @@
+<html>
+<title>ML appl deployed to AWS via flask</title>
+<body>
+<h1>ML application to predict </h1>
+<!-- <h2>Enter below input and this application will predict if the  Passenger survived or not! </h2> -->
+<form action="/pred" method= "POST">
+  <label for="Agelbl">Age:</label>
+  <input type="text" id="Age1234" name="AgeFloat"><br><br>
+  <label for="Pclasslbl">Pclass:</label>
+  <input type="text" id="Pclass1234" name="PclassInt"><br><br>
+  <label for="Sexlbl">Sex:</label>
+  <input type="text" id="Sex1234" name="SexChar"><br><br>
+  <!-- <input type="submit" value="Submit"> -->
+  <button class="Submit"> Predict </button>
+</form>
+<h2>Prediction is :- </h2>
+{% if output %}
+	<p>{{output}}</p>
+{% endif %}
+
+</body>
+</html>
